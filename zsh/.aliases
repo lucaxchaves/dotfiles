@@ -1,0 +1,14 @@
+#!/bin/zsh
+
+eza_params=('--git' '--git-repos-no-status' '--classify' '--group-directories-first' '--time-style=long-iso' '--color-scale'  '--all' '--long' '--header')
+
+
+rider_run(){ /home/lucas/.local/share/JetBrains/Toolbox/scripts/rider $@ >/dev/null 2>&1 &|}
+alias rider=rider_run
+alias ll='eza $eza_params'
+alias ls='eza $eza_params --no-user --no-time --no-permissions'
+alias l='eza $eza_params --no-user --no-time --no-permissions'
+alias la='eza -lbhHigUmuSa'
+alias vi=lvim
+alias vim=lvim
+alias nvim=lvim

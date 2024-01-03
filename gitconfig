@@ -1,21 +1,65 @@
+[checkout]
+    workers = 0
+
+[index]
+    version = 4
+
+[init]
+    defaultBranch = develop
+
 [core]
     pager = delta
+    fsmonitor = true
+    untrackedcache = true
+	commitgraph = true
+	editor = lvim
+
+[color]
+	ui = true
+
+[diff]
+	colorMoved = default
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[merge]
+    conflictstyle = diff3
+
 [user]
 	name = Lucas Chaves
 	email = lucassilvachaves@live.com
-[color]
-	ui = true
-[alias]
-	unchanged = update-index --assume-unchanged
-	undo-unchanged = update-index --no-assume-unchanged
+
 [push]
 	autoSetupRemote = true
-[interactive]
-    diffFilter = delta --color-only
+
+
+[fetch]
+    prune = true
+	writeCommitGraph = true
+
 [delta]
-    navigate = true    # use n and N to move between diff sections
-    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-[merge]
-    conflictstyle = diff3
-[diff]
-	colorMoved = default
+    features = decorations
+    line-numbers = true
+    side-by-side = true
+    
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
+[gpg]
+    format = ssh
+
+[alias]
+	wt-clone = "!sh $HOME/.config/git/worktree-clone.sh"
+    wt-add =  "!sh $HOME/.config/git/worktree-add.sh"
+

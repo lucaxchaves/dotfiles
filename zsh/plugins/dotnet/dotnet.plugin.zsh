@@ -1,3 +1,5 @@
+
+#compdef dotnet
 _dotnet_zsh_complete()
 {
   local completions=("$(dotnet complete "$words")")
@@ -14,14 +16,3 @@ _dotnet_zsh_complete()
 }
 
 compdef _dotnet_zsh_complete dotnet
-_nuke_zsh_complete()
-{
-    local completions=("$(nuke :complete "$words")")
-    reply=( "${(ps:\n:)completions}" )
-}
-compctl -K _nuke_zsh_complete nuke
-
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-

@@ -1,0 +1,63 @@
+belak/zsh-utils path:prompt
+ohmyzsh/ohmyzsh path:plugins/starship
+
+
+# custom plugins
+$ZDOTDIR/plugins/ssh-autoload
+$ZDOTDIR/plugins/dotnet
+$ZDOTDIR/plugins/fzf
+
+# plugins
+fdellwing/zsh-bat
+mattmc3/zman # fzf on man pages
+reegnz/jq-zsh-plugin # use jq with fzf (ALT + J)
+
+
+# ohmyzsh plugins
+ohmyzsh/ohmyzsh path:plugins/aws
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/copybuffer
+ohmyzsh/ohmyzsh path:plugins/copyfile
+ohmyzsh/ohmyzsh path:plugins/copypath
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/ripgrep kind:fpath
+ohmyzsh/ohmyzsh path:plugins/fd kind:fpath
+ohmyzsh/ohmyzsh path:plugins/nvm
+ohmyzsh/ohmyzsh path:plugins/zoxide
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+
+
+# zsh-utils
+belak/zsh-utils path:editor
+belak/zsh-utils path:utility
+belak/zsh-utils path:history
+
+
+# defered plugins
+zdharma-continuum/fast-syntax-highlighting kind:defer
+
+# completions
+clarketm/zsh-completions kind:fpath
+
+
+# use fzf to complete commands
+Aloxaf/fzf-tab
+Freed-Wu/fzf-tab-source
+
+
+
+# add completions
+belak/zsh-utils path:completion
+
+
+
+jirutka/zsh-shift-select
+
+
+# aliases
+$ZDOTDIR/.aliases
+
+# always at the end
+zsh-users/zsh-history-substring-search kind:defer
+zsh-users/zsh-autosuggestions kind:defer
+
