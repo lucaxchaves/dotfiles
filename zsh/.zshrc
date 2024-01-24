@@ -153,3 +153,4 @@ bindkey -- "${keys[Ctrl+Delete]}"     .kill-word
 #bindkey -- "${keys[Ctrl+Shift+Backspace]}" .backward-kill-line
 #bindkey -- "${keys[Ctrl+Shift+Delete]}" .kill-line
 
+

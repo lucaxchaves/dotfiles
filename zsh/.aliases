@@ -12,3 +12,11 @@ alias la='eza -lbhHigUmuSa'
 alias vi=lvim
 alias vim=lvim
 alias nvim=lvim
+
+alias vpnon='openvpn3 session-start -c tattle'
+alias vpnoff='openvpn3 session-manage --disconnect -c tattle'
+
+alias awslogin='aws sso login'
+
+alias netbuildq='dotnet build --nologo -v q --property WarningLevel=0 /clp:ErrorsOnly'
+
