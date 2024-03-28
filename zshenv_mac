@@ -6,14 +6,18 @@ export FZF_BASE="$(brew --prefix)/opt/fzf"
 export FZF_DEFAULT_OPTS='--color=dark
 --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
 --color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
---reverse'
+--reverse
+--preview-window=right:80%
+'
+
 export _ZO_FZF_OPTS='--color=dark
 --color=fg:-1,bg:-1,hl:#c678dd,fg+:#ffffff,bg+:#4b5263,hl+:#d858fe
 --color=info:#98c379,prompt:#61afef,pointer:#be5046,marker:#e5c07b,spinner:#61afef,header:#61afef
 --bind=ctrl-z:ignore --exit-0 --height=40% --inline-info --no-sort --reverse --select-1 --preview="eza -la {2..}"'
 
 
-
+export FZF_TMUX=1
+export FZF_TMUX_OPTS='-p80%,60%'
 export FZF_DEFAULT_COMMAND='fd --strip-cwd-prefix --hidden --follow --exclude .git'
 
 fman() {
