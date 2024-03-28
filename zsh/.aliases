@@ -3,15 +3,34 @@
 eza_params=('--git' '--git-repos-no-status' '--classify' '--group-directories-first' '--time-style=long-iso' '--color-scale'  '--all' '--long' '--header')
 
 
-rider_run(){ /home/lucas/.local/share/JetBrains/Toolbox/scripts/rider $@ >/dev/null 2>&1 &|}
-alias rider=rider_run
+#rider_run(){ /home/lucas/.local/share/JetBrains/Toolbox/scripts/rider $@ >/dev/null 2>&1 &|}
+#alias rider=rider_run
 alias ll='eza $eza_params'
 alias ls='eza $eza_params --no-user --no-time --no-permissions'
 alias l='eza $eza_params --no-user --no-time --no-permissions'
 alias la='eza -lbhHigUmuSa'
-alias vi=lvim
-alias vim=lvim
-alias nvim=lvim
+alias vi=nvim
+alias vim=nvim
+#alias nvim=lvim
+alias cp=cp -ri
+alias mv=mv -i
+alias mkdir=mkdir -p
+alias rmdir=rmdir -p
+alias find='fd'
+alias fd='fd --color always ' # Always colorize output by default
+alias fd_details='fd  --list-details' # list details
+alias fd_ext='fd --extension' # Filter by file extension, insert <extension> after this command
+alias fd_name='fd --glob' # Filter by file name (default: regular expression)
+alias fd_case='fd --ignore-case' # --ignore-case, -i: Ignore case when searching
+alias fd_hidden='fd --hidden' # --hidden, -H: Search hidden files and directories
+alias fd_abs='fd --absolute-path' # --absolute-path, -a: Show absolute instead of relative paths
+alias fd_exec='fd --exec' # --exec, -x: Execute command for each search result
+alias fd_execlude='fd --exclude' # --exclude, -E: Exclude files and directories that match the given glob pattern <pattern>
+alias fd_size='fd --size' # --size, -s: Filter by file size (insert <size> after this command)
+alias fd_owner='fd --owner' # --owner, -u: Filter by file owner (insert <user:group> after this command)
+alias fd_symbolic='fd --follow' # --follow,  Follow symbolic links
+alias fd_version='fd --version' # --version,  Show version information
+alias fd_help='fd --help' # --help,  Show help message
 
 alias vpnon='openvpn3 session-start -c tattle'
 alias vpnoff='openvpn3 session-manage --disconnect -c tattle'

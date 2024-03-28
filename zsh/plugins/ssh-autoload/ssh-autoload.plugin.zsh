@@ -1,2 +1,1 @@
-ssh-add -q ~/.ssh/id_github ~/.ssh/id_bitbucket
-
+ssh-add -q ~/.ssh/id_ed25519

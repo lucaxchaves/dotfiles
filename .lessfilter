@@ -1,0 +1,24 @@
+#! /usr/bin/env bash
+has_cmd() {
+	for opt in "$@"; do
+		command -v "$opt" >/dev/null
+	done
+}
+
+mime=$(file -Lbs --mime-type "$1")
+category=${mime%%/*}
+kind=${mime##*/}
+ext=${1##*.}
+
+if [ "$kind" = json ]; then
+	if has_cmd jq; then
+		jq -Cr . "$1"
+	fi
+elif [ -d "$1" ]; then
+    eza -hl --no-permissions --no-time --no-user --git --git-repos-no-status --classify --group-directories-first --time-style=long-iso --color-scale --color=always --icons "$1"
+elif [ "$category" = text ]; then
+
+    bat --color=always "$1"
+else
+	exit 1
+fi

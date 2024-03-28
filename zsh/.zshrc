@@ -1,3 +1,4 @@
+setopt glob_dots
 setopt correct                                                  # Auto correct mistakes
 setopt extended_glob                                             # Extended globbing. Allows using regular expressions with *
 setopt no_case_glob                                               # Case insensitive globbing
@@ -10,15 +11,16 @@ setopt		PUSHD_MINUS
 setopt		PUSHD_SILENT
 unsetopt	PUSHD_TO_HOME
 
-autoload -Uz compinit colors zcalc && compinit -d && colors
+autoload -Uz compinit colors && compinit -d && colors
 
 
 [[ -e ${ZDOTDIR:-~}/.zstyles ]] && source ${ZDOTDIR:-~}/.zstyles
 export KEYTIMEOUT=1
+source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 
-
-source '/usr/share/zsh-antidote/antidote.zsh'
 antidote load
+export PATH="$PATH:$FORGIT_INSTALL_DIR/bin"
+
 
 #tmux-window-name() {
 #  if ! tmux has-session 2> /dev/null; then

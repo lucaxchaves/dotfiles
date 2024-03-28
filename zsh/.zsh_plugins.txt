@@ -4,13 +4,14 @@ ohmyzsh/ohmyzsh path:plugins/starship
 
 # custom plugins
 $ZDOTDIR/plugins/ssh-autoload
-$ZDOTDIR/plugins/dotnet
+$ZDOTDIR/plugins/dotnet kind:defer
 $ZDOTDIR/plugins/fzf
+$ZDOTDIR/plugins/zoxide 
 
 # plugins
-fdellwing/zsh-bat
-mattmc3/zman # fzf on man pages
-reegnz/jq-zsh-plugin # use jq with fzf (ALT + J)
+fdellwing/zsh-bat kind:defer
+mattmc3/zman kind:defer # fzf on man pages
+reegnz/jq-zsh-plugin kind:defer # use jq with fzf (ALT + J)
 
 
 # ohmyzsh plugins
@@ -23,7 +24,6 @@ ohmyzsh/ohmyzsh path:plugins/extract
 ohmyzsh/ohmyzsh path:plugins/ripgrep kind:fpath
 ohmyzsh/ohmyzsh path:plugins/fd kind:fpath
 ohmyzsh/ohmyzsh path:plugins/nvm
-ohmyzsh/ohmyzsh path:plugins/zoxide
 ohmyzsh/ohmyzsh path:plugins/colored-man-pages
 
 
@@ -33,25 +33,26 @@ belak/zsh-utils path:utility
 belak/zsh-utils path:history
 
 
-# defered plugins
-zdharma-continuum/fast-syntax-highlighting kind:defer
+
+
+jirutka/zsh-shift-select
 
 # completions
 clarketm/zsh-completions kind:fpath
 
+# add completions
+belak/zsh-utils path:completion
 
 # use fzf to complete commands
 Aloxaf/fzf-tab
 Freed-Wu/fzf-tab-source
+wfxr/forgit kind:defer
+wfxr/forgit path:completions kind:fpath
 
 
-
-# add completions
-belak/zsh-utils path:completion
-
-
-
-jirutka/zsh-shift-select
+# defered plugins
+zdharma-continuum/fast-syntax-highlighting kind:defer
+unixorn/bitbucket-git-helpers.plugin.zsh kind:defer
 
 
 # aliases
