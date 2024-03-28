@@ -9,6 +9,10 @@ zstyle ':fzf-tab:*' switch-group ',' '.'
 zstyle ':fzf-tab:*' fzf-min-height '40'
 zstyle ':antidote:bundle' use-friendly-names 'yes'
 zstyle ':fzf-tab:*' fzf-command fzf-tmux
+zstyle ':fzf-tab:*' fzf-flags '-p80%,60%'
+
+
+
 zstyle ':fzf-tab:*' fzf-pad 4
 
 
